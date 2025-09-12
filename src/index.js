@@ -49,42 +49,84 @@ console.log("Hello World from the index.js file.");
 
 // //#endregion
 
-//#region Functions
+// //#region Functions
 
-function examplefunction(){
-    console.log("Function code happens here");
+// function examplefunction(){
+//     console.log("Function code happens here");
+// }
+
+// examplefunction();
+
+// function messageRepeater(messageToRepeat){
+//     console.log(messageToRepeat + messageToRepeat + messageToRepeat);
+//     console.log("Arrow function here.  Here is the value of this:" + this);
+// }
+
+// for (let index = 0; index < 2; index++) {
+//     messageRepeater("Hello ");
+// }
+
+// let favouriteDinners = [
+//     "palak paneer",
+//     "katsu curry",
+//     "dumplings",
+//     "lagham",
+//     "lentil bolognese"
+// ]
+
+// // favouriteDinners.forEach(dinner => {
+// //     messageRepeater(dinner);
+// // })
+
+// favouriteDinners.forEach(dinner => messageRepeater(dinner));
+
+// const messageRepeaterArrowFunction = (messageToRepeat) => {
+//     console.log("Arrow function here.  Here is the value of this:" + this);
+// }
+// messageRepeaterArrowFunction("bananas")
+
+// //#endregion
+
+
+//#region Classes
+
+class ExampleClass {
+    constructor(){
+        console.log("ExampleClass instance created.")
+    }
+
+    messageRepeater = (messageToRepeat) => {
+        console.log(messageToRepeat + messageToRepeat + messageToRepeat)
+        console.log("Arrow function of class instance has a value for this of: " + this);
+    }
 }
 
-examplefunction();
+let exampleInstance = new ExampleClass();
 
-function messageRepeater(messageToRepeat){
-    console.log(messageToRepeat + messageToRepeat + messageToRepeat);
-    console.log("Arrow function here.  Here is the value of this:" + this);
+console.log(exampleInstance);
+console.log(typeof exampleInstance);
+exampleInstance.messageRepeater("bananas");
+
+function functionThatThrowsAnError() {
+    throw new Error("example error")
 }
 
-for (let index = 0; index < 2; index++) {
-    messageRepeater("Hello ");
+try {
+    let exampleError = functionThatThrowsAnError();
+    console.log("Example error value" + exampleError);
+} catch (error) {
+    console.log("Caught error is: " + error);
 }
 
-let favouriteDinners = [
-    "palak paneer",
-    "katsu curry",
-    "dumplings",
-    "lagham",
-    "lentil bolognese"
-]
+// let exampleError = functionThatThrowsAnError()
+// console.log("Example error value" + exampleError);
 
-// favouriteDinners.forEach(dinner => {
-//     messageRepeater(dinner);
-// })
-
-favouriteDinners.forEach(dinner => messageRepeater(dinner));
-
-const messageRepeaterArrowFunction = (messageToRepeat) => {
-    console.log("Arrow function here.  Here is the value of this:" + this);
+function adder(num1, num2) {
+    return num1 + num2
 }
-messageRepeaterArrowFunction("bananas")
 
+let result = adder(1, 1)
+console.log("Result is: " + result);
+console.log(result == 2);
 
-
-//#endregion
+//#endregion 
