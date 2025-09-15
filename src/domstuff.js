@@ -43,9 +43,56 @@ function breakfastRenderer () {
     targetParentContainer.appendChild(menuContainer);
 
     // 2. Create menu options
+    // for loop style
+    // for (let index = 0; index < breakfastMenuItems.length; index++) {
+    //     const individualMenuItem = breakfastMenuItems[index];
+    //     console.log(individualMenuItem)        
+    // };
 
+    // forOf style
+    // for (const individualMenuItem of breakfastMenuItems) {
+    //     console.log(individualMenuItem)
+    // };
+
+    // forIn style
+    // for (const key in breakfastMenuItems) {
+    //     // if (!Object.hasOwn(object, key)) continue;
+    //     const element = breakfastMenuItems[key];   
+    //     console.log(key, element);
+    // }
+
+    // forEach style
+    // breakfastMenuItems.forEach(individualMenuItem => {
+    //     console.log(individualMenuItem);
+    //     let menuItemCard = document.createElement("section");
+    //     menuItemCard.className = "menuItem";
+    //     let menuItemTitle = document.createElement("h2")
+    //     menuItemTitle.innerText = individualMenuItem;
+    //     menuItemCard.appendChild(menuItemTitle);
+
+        // searching the page for content is slow.  Try to avoid.
+        // let menuContainer = document.getElementById("breakfastmenu");
+    //     menuContainer.appendChild(menuItemCard);
+    // });
+
+    // map style
+    let menuItemCards = breakfastMenuItems.map(individualMenuItem => {
+        console.log(individualMenuItem);
+
+        let menuItemCard = document.createElement("section");
+        menuItemCard.className = "menuItem";
+        let menuItemTitle = document.createElement("h2")
+        menuItemTitle.innerText = individualMenuItem;
+        menuItemCard.appendChild(menuItemTitle);
+
+        return menuItemCard;
+    });
 
     // 3. Insert menu options into breakfast menu container
+    if (menuItemCards.length != 0) {
+        menuContainer.append(...menuItemCards);
+    };
+    
 }
 
 breakfastRenderer();
