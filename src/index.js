@@ -49,43 +49,43 @@ console.log("Hello World from the index.js file.");
 
 // //#endregion
 
-// //#region Functions
+//#region Functions
 
-// function examplefunction(){
-//     console.log("Function code happens here");
-// }
+function examplefunction(){
+    console.log("Function code happens here");
+}
 
-// examplefunction();
+examplefunction();
 
-// function messageRepeater(messageToRepeat){
-//     console.log(messageToRepeat + messageToRepeat + messageToRepeat);
-//     console.log("Arrow function here.  Here is the value of this:" + this);
-// }
+function messageRepeater(messageToRepeat){
+    console.log(messageToRepeat + messageToRepeat + messageToRepeat);
+    console.log("Arrow function here.  Here is the value of this:" + this);
+}
 
-// for (let index = 0; index < 2; index++) {
-//     messageRepeater("Hello ");
-// }
+for (let index = 0; index < 2; index++) {
+    messageRepeater("Hello ");
+}
 
-// let favouriteDinners = [
-//     "palak paneer",
-//     "katsu curry",
-//     "dumplings",
-//     "lagham",
-//     "lentil bolognese"
-// ]
+let favouriteDinners = [
+    "palak paneer",
+    "katsu curry",
+    "dumplings",
+    "lagham",
+    "lentil bolognese"
+]
 
-// // favouriteDinners.forEach(dinner => {
-// //     messageRepeater(dinner);
-// // })
+// favouriteDinners.forEach(dinner => {
+//     messageRepeater(dinner);
+// })
 
-// favouriteDinners.forEach(dinner => messageRepeater(dinner));
+favouriteDinners.forEach(dinner => messageRepeater(dinner));
 
-// const messageRepeaterArrowFunction = (messageToRepeat) => {
-//     console.log("Arrow function here.  Here is the value of this:" + this);
-// }
-// messageRepeaterArrowFunction("bananas")
+const messageRepeaterArrowFunction = (messageToRepeat) => {
+    console.log("Arrow function here.  Here is the value of this:" + this);
+}
+messageRepeaterArrowFunction("bananas")
 
-// //#endregion
+//#endregion
 
 
 //#region Classes
@@ -130,3 +130,5 @@ console.log("Result is: " + result);
 console.log(result == 2);
 
 //#endregion 
+
+
