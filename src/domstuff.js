@@ -1,5 +1,10 @@
 console.log("domstuff.js has loaded.");
 
+/** 
+ * This function finds and updates the text of a paragraph tag on the webpage.
+ * 
+ * `The new text will be a message here`
+*/
 function paragraphTagUpdater(){
     // 1. Find 'p' tag
     let targetPTag = document.querySelector("p");
@@ -28,7 +33,15 @@ let breakfastMenuItems = [
     "omlette",
     "avo smash"
 ];
-
+/**
+ * Will render a list of menu items as HTML on a web page.
+ * 
+ * @param {string[]} targetMenuList Array of strings where each string is one menu item.
+ * 
+ * @example <caption>How to use the 'breakfastRenderer'</caption>
+ * 
+ * breakfastRenderer(['bananas', 'yoghurt'])
+ */
 function breakfastRenderer (targetMenuList = breakfastMenuItems) {
 
     // 0. Delete existing menu content
@@ -101,7 +114,7 @@ function breakfastRenderer (targetMenuList = breakfastMenuItems) {
     };
     
 }
-
+ 
 // breakfastRenderer();
 
 let menuToggleButton = document.getElementById("menuToggleButton");
